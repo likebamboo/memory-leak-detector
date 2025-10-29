@@ -31,8 +31,8 @@ extern "C" {
 #define ADDR_HASH_OFFSET 6
 #endif
 
-#define MAX_TRACE_DEPTH 16
-#define MAX_BUFFER_SIZE 1024
+#define MAX_TRACE_DEPTH 32
+#define MAX_BUFFER_SIZE 2048
 
 #define ALLOC_INDEX_SIZE 1 << 16
 #define ALLOC_CACHE_SIZE 1 << 15

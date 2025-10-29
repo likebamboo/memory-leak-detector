@@ -45,7 +45,23 @@ afterEvaluate {
                 from components.release
                 groupId = 'com.github.bytedance'
                 artifactId = 'memory-leak-detector'
-                version = '0.2.1'
+                version = '0.2.1-bamboo'
+            }
+        }
+
+        repositories {
+            // The repository to publish to, Sonatype/MavenCentral
+            maven {
+                // This is an arbitrary name, you may also use "mavencentral" or
+                // any other name that's descriptive for you
+                name = "MavenCentral" // todo publishReleasePublicationToMavenCentralRepository 发布任务会用到这个名字
+                url = "" // todo 发布地址
+
+                // The username and password we've fetched earlier
+                credentials {
+                    username "" // todo 用户名
+                    password "" // todo 密码
+                }
             }
         }
     }

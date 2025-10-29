@@ -11,8 +11,10 @@ public class DemoApp extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        String space = new File(Environment.getExternalStorageDirectory(), "raphael").getAbsolutePath();
-        Raphael.start(Raphael.MAP64_MODE | Raphael.ALLOC_MODE | 0x0F0000 | 1024, space, null);
+        String space = getExternalFilesDir("") + "/raphael";
+        new File(space).delete();
+        new File(space).mkdirs();
+        Raphael.start(Raphael.MAP64_MODE | Raphael.ALLOC_MODE | 0x1F0000 | 1024, space, null);
 //      Raphael.start(Raphael.MAP64_MODE|Raphael.ALLOC_MODE|0x0F0000|1024, space, ".*libhwui\\.so$");
     }
 }
